@@ -95,22 +95,3 @@ class gradientLasso(object):
             cpt+=1
         return w_k*constraint
 
-"""
-from logistic_regression import logisticRegression
-
-N = 1000
-Kt = 10
-K = 4
-e = np.random.randn(N,)
-X = np.random.randn(N,Kt)
-Xint = np.concatenate((np.ones((N,1)),X[:,0:K]), axis=1)
-beta = [1,2,3,4,5]
-p = 1.0/(1.0 + np.exp(-Xint.dot(beta))).reshape(N,1)
-y = np.random.binomial(1,p)
-model = logisticRegression(y,X)
-param = model.estimate()
-
-ggl = gradientLasso(model)
-pp = ggl.estimate(2)
-print pp.sum()
-"""
