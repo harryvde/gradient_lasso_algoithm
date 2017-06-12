@@ -47,7 +47,7 @@ class likelihoodModel:
         """Likelihood function"""
         raise Exception("Likelihood should be implemented in child class")
     
-    @abstractmethod    
+    @abstractmethod
     def jacobian(self,beta):
         """Method returns the first derivative of the likelihood"""
         raise Exception("Likelihood should be implemented in child class")
